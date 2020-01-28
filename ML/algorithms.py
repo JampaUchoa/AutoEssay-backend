@@ -52,7 +52,7 @@ class Classifier:
 
     def mean_score(self):
         """
-        
+
         :return: média ponderada da nota.
         """
         rf_score = self.random_forest_score()
