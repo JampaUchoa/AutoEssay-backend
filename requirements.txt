@@ -1,1 +1,4 @@
+joblib
+scikit-learn
+numpy
 django==3.0.2
