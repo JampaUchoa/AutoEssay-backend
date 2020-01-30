@@ -1,3 +1,6 @@
+nltk
+liwc
+djangorestframework
 joblib
 scikit-learn
 numpy
