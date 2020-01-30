@@ -2,3 +2,6 @@ joblib
 scikit-learn
 numpy
 django==3.0.2
+pandas
+spacy
+python -m spacy download pt_core_news_sm
