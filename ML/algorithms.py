@@ -70,7 +70,7 @@ class CoherenceClf:
 
         tf_idf_features = get_tf_idf_features([self._text])
 
-        return linear_reg_model.predict(tf_idf_features)[0]
+        return linear_reg_model.predict(tf_idf_features)[0]*100
 
     def random_forest_score(self):
         """
@@ -81,7 +81,7 @@ class CoherenceClf:
 
         liwc_features = get_liwc_features(self._text)
 
-        return random_forest_model.predict(liwc_features)[0]
+        return random_forest_model.predict(liwc_features)[0]*100
 
     def mean_score(self):
         """
@@ -90,7 +90,7 @@ class CoherenceClf:
         """
         rf_score = self.random_forest_score()
         l_reg_score = self.linear_score()
-        return np.mean([0.80 * rf_score, 0.7617450923787529 * l_reg_score])
+        return np.mean([0.80 * rf_score, 0.7617450923787529 * l_reg_score])*100
 
 
 texto = "Na antiguidade, a atribuição de super-poderes à superpoderes a seres mitológicos foi de suma importância " \
