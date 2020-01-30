@@ -119,5 +119,5 @@ texto = "Na antiguidade, a atribuição de super-poderes à superpoderes a seres
         "dos discentes no que tange os efeitos sociais da biotecnologia. Destarte, estas tecnologias tenderão a ser " \
         "limitadas, e a superação dos limites humanos se manterão, somente, na mitologia e no imaginário humano. "
 
-clf = Classifier(texto)
-print("Coherence Score", clf.mean_score() * 100)
+clf = CoherenceClf(texto)
+print("Coherence Score: %.2f" % (clf.mean_score() * 100))
