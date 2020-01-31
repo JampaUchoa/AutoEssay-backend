@@ -14,7 +14,8 @@ def index(request):
     else:
         essay = "Historicamente causadores de inúmeras vítimas, os acidentes de trânsito vêm ocorrendo com frequência cada vez menor"
 
-    redacao = Traditional("essay")
+    print(essay)
+    redacao = Traditional(essay)
     score_svm = redacao.SVM_Modeler()
     score_dt = redacao.Tree_Modeler()
 
