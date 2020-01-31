@@ -7,4 +7,5 @@ numpy
 django==3.0.2
 pandas
 spacy
+django-cors-headers
 #python -m spacy download pt_core_news_sm

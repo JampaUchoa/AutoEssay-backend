@@ -1,20 +1,26 @@
 from django.shortcuts import render
-# Create your views here.
 from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
 #from ML.algorithms import Classifier
 from traditional.Classifiers import Classifiers as Traditional
+import json
 
+@csrf_exempt 
 def index(request):
 
-    notas = []
+    if request.method == 'POST':
+        essay = json.loads(request.body)["essay"]
+    else:
+        essay = "Historicamente causadores de inúmeras vítimas, os acidentes de trânsito vêm ocorrendo com frequência cada vez menor"
 
-    redacao = Traditional("Historicamente causadores de inúmeras vítimas, os acidentes de trânsito vêm ocorrendo com frequência cada vez menor")
-    nota_svm = redacao.SVM_Modeler()
-    nota_dt = redacao.Tree_Modeler()
+    redacao = Traditional("essay")
+    score_svm = redacao.SVM_Modeler()
+    score_dt = redacao.Tree_Modeler()
 
     scores = [
-        {"algorithm": "SVM", "total_score": nota_svm},
-        {"algorithm": "Decision Tree", "total_score": nota_dt},
+        {"algorithm": "SVM", "score": score_svm},
+        {"algorithm": "Decision Tree", "score": score_dt},
     ]
 
     return JsonResponse({"success": True, "scores": scores})
