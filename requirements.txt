@@ -10,6 +10,6 @@ spacy
 django-cors-headers
 lxml
 #python -m spacy download pt_core_news_sm
-pip install git+https://github.com/gpassero/uol-redacoes-xml.git
+git+https://github.com/gpassero/uol-redacoes-xml.git
 matplotlib
 
