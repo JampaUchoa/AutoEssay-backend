@@ -26,7 +26,7 @@ def index(request):
     scores = [
         {"algorithm": "SVM", "score": score_svm},
         {"algorithm": "Decision Tree", "score": score_dt},
-        {"algorithm": "coh_mean_score", "score": coh_clf.random_forest_score()}
+        {"algorithm": "coh_mean_score", "score": coh_clf.mean_score()}
     ]
 
     return JsonResponse({"success": True, "scores": scores})

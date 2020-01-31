@@ -70,7 +70,7 @@ class CoherenceClf:
 
         tf_idf_features = get_tf_idf_features([self._text])
 
-        return linear_reg_model.predict(tf_idf_features)[0]*100
+        return linear_reg_model.predict(tf_idf_features)[0]
 
     def random_forest_score(self):
         """
@@ -81,7 +81,7 @@ class CoherenceClf:
 
         liwc_features = get_liwc_features(self._text)
 
-        return random_forest_model.predict(liwc_features)[0]*100
+        return random_forest_model.predict(liwc_features)[0]
 
     def mean_score(self):
         """
