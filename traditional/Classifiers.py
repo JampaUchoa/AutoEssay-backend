@@ -5,10 +5,11 @@ from sklearn.feature_extraction.text import TfidfTransformer
 class Classifiers:
 
     def __init__(self, text):
-        self.text = ''
+        self.text = text
 
     def SVM_Modeler(self):
         texto= []
+        print(self.text)
         texto.append(self.text)
         meu_arquivo = open('traditional/data/train_text.sav', 'rb')
         treino_texto = pickle.load(meu_arquivo)
