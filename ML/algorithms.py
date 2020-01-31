@@ -90,7 +90,7 @@ class CoherenceClf:
         """
         rf_score = self.random_forest_score()
         l_reg_score = self.linear_score()
-        return np.mean([0.80 * rf_score, 0.7617450923787529 * l_reg_score])*100
+        return np.mean([0.80 * rf_score, 0.7617450923787529 * l_reg_score])
 
 
 texto = "Na antiguidade, a atribuição de super-poderes à superpoderes a seres mitológicos foi de suma importância " \
@@ -120,4 +120,4 @@ texto = "Na antiguidade, a atribuição de super-poderes à superpoderes a seres
         "limitadas, e a superação dos limites humanos se manterão, somente, na mitologia e no imaginário humano. "
 
 clf = CoherenceClf(texto)
-print("Coherence Score: %.2f" % (clf.mean_score() * 100))
+print("Coherence Score: %.2f" % (clf.mean_score()))
