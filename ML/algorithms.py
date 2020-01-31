@@ -90,5 +90,5 @@ class CoherenceClf:
         """
         rf_score = self.random_forest_score()
         l_reg_score = self.linear_score()
-        return np.mean([0.80 * rf_score, 0.7617450923787529 * l_reg_score])
+        return np.mean([0.80 * l_reg_score, 0.7617450923787529 * rf_score])
 
