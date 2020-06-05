@@ -4,7 +4,7 @@ djangorestframework
 joblib
 scikit-learn
 numpy
-django==3.0.2
+django==3.0.7
 pandas
 spacy
 django-cors-headers
